@@ -15,44 +15,7 @@
       </style>
   </head>
   <body>
-    <section class="row">
-      <form action="/add" method="post" class="col s12 l8 offset-l2">
-        <div class="input-field col s12 l12">
-          <input type="text" name="title" id="title" class="validate" value="">  
-          <label for="description">Título</label>
-        </div>        
-        <div class="input-field col s12 l12">
-          <textarea type="text" name="description" id="description" class="materialize-textarea" value=""></textarea>
-          <label for="description">Descrição</label>
-        </div>
-        <div class="col s12 l4 m4">
-          <button class="btn waves-effect waves-light" type="submit" name="action">Adicionar
-            <i class="material-icons right">done</i>
-          </button>  
-        </div>
-      </form>
-    </section>
-    <section class="row">
-      <div class="col s12 l8 offset-l2">
-        <ul id="lista" class="collapsible popout" data-collapsible="accordion">
-          <% for (var i = 0; i < annotations.length; i++) { %>
-            <li>
-              <div class="collapsible-header">
-                <%= annotations[i].title %>
-                  <a href="remove/<%= annotations[i]._id%>" class="secondary-content"><i class="material-icons">delete</i></a>
-              </div>
-              <div class="collapsible-body">
-                <span>
-                  <%= annotations[i].description %>
-                </span>
-              </div>
-              
-            </li>
-          <% } %>
-        </ul>
-
-      </div>
-    </section>
+    <h3>Teste Deploy</h3>
 
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>

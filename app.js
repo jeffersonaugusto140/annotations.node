@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var ann = require('./routes/annotation');
 
 var annotationModel = require('./logic/model/annotationModel');
 
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/annotation', ann);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -9,19 +9,4 @@ router.get('/', function(req, res, next) {
   });
 });
 
-router.post('/add', function (request, response, next) {
-  var body = request.body;
-
-  annotationModel.add(body);
-  
-  response.redirect('/');
-});
-
-router.get('/remove/:id', function(request, response, next) {
-  var id = request.params.id;
-  annotationModel.remove(id, function () {
-    response.redirect('/');
-  });
-});
-
 module.exports = router;
