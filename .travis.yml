@@ -1,15 +1,18 @@
 language: node_js
 node_js:
-  - "4.1"
+- '4.1'
 install:
-  - npm install
+- npm install
 script:
-  - npm test
+- npm test
 deploy:
   provider: gae
   skip_cleanup: true
-  keyfile: "AnnotationV1-770d141d9f2f.json.enc"
-  project: "annotationv1"
+  keyfile: AnnotationV1-770d141d9f2f.json.enc
+  project: annotationv1
   default: true
   on:
     all_branches: true
+before_install:
+- openssl aes-256-cbc -K $encrypted_e2482d41b378_key -iv $encrypted_e2482d41b378_iv
+  -in AnnotationV1-770d141d9f2f.json.enc -out AnnotationV1-770d141d9f2f.json -d
