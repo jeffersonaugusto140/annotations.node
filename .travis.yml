@@ -5,3 +5,7 @@ install:
   - npm install
 script:
   - npm test
+deploy:
+  provider: gae
+  keyfile: "AnnotationV1-770d141d9f2f.json"
+  project: "annotationv1"
