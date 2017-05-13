@@ -7,5 +7,9 @@ script:
   - npm test
 deploy:
   provider: gae
+  skip_cleanup: true
   keyfile: "AnnotationV1-770d141d9f2f.json"
   project: "annotationv1"
+  default: true
+  on:
+    all_branches: true
