@@ -8,7 +8,7 @@ script:
 deploy:
   provider: gae
   skip_cleanup: true
-  keyfile: "AnnotationV1-770d141d9f2f.json"
+  keyfile: "AnnotationV1-770d141d9f2f.json.enc"
   project: "annotationv1"
   default: true
   on:
