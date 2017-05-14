@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title><% title %></title>
+    <title><%= title %></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -16,7 +16,7 @@
   </head>
   <body>
     <section class="row">
-      <form action="/add" method="post" class="col s12 l8 offset-l2">
+      <form action="/annotation" method="post" class="col s12 l8 offset-l2">
         <div class="input-field col s12 l12">
           <input type="text" name="title" id="title" class="validate" value="">  
           <label for="description">Título</label>
@@ -39,7 +39,7 @@
             <li>
               <div class="collapsible-header">
                 <%= annotations[i].title %>
-                  <a href="remove/<%= annotations[i]._id%>" class="secondary-content"><i class="material-icons">delete</i></a>
+                  <a href="./annotation/remove/<%= annotations[i]._id%>" class="secondary-content"><i class="material-icons">delete</i></a>
               </div>
               <div class="collapsible-body">
                 <span>

@@ -9,18 +9,18 @@ router.get('/', function(req, res, next) {
   });
 });
 
-router.post('/add', function (request, response, next) {
+router.post('/', function (request, response, next) {
   var body = request.body;
 
   annotationModel.add(body);
   
-  response.redirect('/');
+  response.redirect('annotation');
 });
 
 router.get('/remove/:id', function(request, response, next) {
   var id = request.params.id;
   annotationModel.remove(id, function () {
-    response.redirect('/');
+    response.redirect('/annotation');
   });
 });
 
