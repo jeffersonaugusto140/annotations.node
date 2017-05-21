@@ -34,18 +34,28 @@
     </section>
     <section class="row">
       <div class="col s12 l8 offset-l2">
-        <ul id="lista" class="collapsible popout" data-collapsible="accordion">
+        <ul id="lista" class="collection" >
           <% for (var i = 0; i < annotations.length; i++) { %>
-            <li>
-              <div class="collapsible-header">
-                <%= annotations[i].title %>
-                  <a href="./annotation/remove/<%= annotations[i]._id%>" class="secondary-content"><i class="material-icons">delete</i></a>
-              </div>
-              <div class="collapsible-body">
-                <span>
-                  <%= annotations[i].description %>
-                </span>
-              </div>
+            <li class="collection-item">
+              <span><%= annotations[i].title %></span>
+              <a href="#!" class="secondary-content"><i class="material-icons">delete</i></a>
+              <a href="#!" class="secondary-content"><i class="material-icons">open_in_new</i></a>
+              <!--<div class="collapsible-body">
+                <div class="">
+                  <div class="">
+                    <span>
+                      <%= annotations[i].description %>
+                    </span>
+                  </div>
+                  <div class="">
+                    <div class="footer-copyright">
+                      <a href="./annotation/remove/<%= annotations[i]._id%>" class="waves-effect waves-teal btn-flat text-lighten-4 right">
+                        Deletar
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>-->
               
             </li>
           <% } %>
@@ -57,7 +67,7 @@
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script>
-        Materialize.showStaggeredList('#lista');
+        
       </script>
   </body>
 </html>
